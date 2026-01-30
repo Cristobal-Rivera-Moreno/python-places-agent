@@ -1,0 +1,2 @@
+from .open_maps_api import get_nearby_amenities
+from .google_places_api import get_nearby_places as get_nearby_amenities_from_google_maps
