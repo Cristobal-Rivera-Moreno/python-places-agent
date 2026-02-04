@@ -1,6 +1,7 @@
 import googlemaps
+from models import settings
 
-gmaps = googlemaps.Client(key="AIzaSyBzWMC0MC7_wH8j1tXTpZDIVq7n94E9tZE")
+gmaps = googlemaps.Client(key=settings.google_places_api_key)
 
 
 def get_nearby_places(amenity: str, lat: float, lon: float, radius: int = 1000) -> str:

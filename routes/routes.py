@@ -4,9 +4,10 @@ from google import genai
 from google.genai import types
 from tools import get_nearby_amenities_from_google_maps
 from prompts import get_tourist_guide_prompt
+from models import settings
 
 app = FastAPI(title="Gemini Location Agent API")
-client = genai.Client(api_key="AIzaSyB_rhWvrvrVULIz0Urz_6FVNClsu5ugCQM")
+client = genai.Client(api_key=settings.gemini_api_key)
 history = dict()
 
 @app.post("/api/chat")
